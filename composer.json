@@ -1,0 +1,13 @@
+{
+  "name": "srcode/facebookpixel",
+  "description": "This module introduces a Facebookpixel with e-commerce tracking.",
+  "type": "magento-module",
+  "homepage": "https://github.com/srcode-nl/magento-module-facebook",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Joey Kheireddine",
+      "email": "joey@srcode.nl"
+    }
+  ]
+}
