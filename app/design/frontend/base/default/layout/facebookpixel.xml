@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+    <default>
+        <!--ALWAYS SET PAGE VIEW-->
+        <reference name="before_body_end">
+            <block type="srcode_facebookpixel/module" name="facebookpixel" as="facebookpixel"
+                   template="facebookpixel/content.phtml"/>
+        </reference>
+    </default>
+
+    <!--IF PURCHASE WAS MADE -->
+
+    <checkout_onepage_success>
+        <reference name="facebookpixel">
+            <block type="srcode_facebookpixel/module" name="facebookpixel" as="facebookpixel"
+                   template="facebookpixel/success.phtml"/>
+        </reference>
+    </checkout_onepage_success>
+
+    <!--INITIATE-->
+
+    <checkout_cart_add>
+        <reference name="facebookpixel">
+            <block type="srcode_facebookpixel/module" name="facebookpixel" as="facebookpixel"
+                   template="facebookpixel/checkout.phtml"/>
+        </reference>
+    </checkout_cart_add>
+
+    <!--ADD TO WISHLIST -->
+
+    <wishlist_index_add>
+        <reference name="facebookpixel">
+            <block type="srcode_facebookpixel/module" name="facebookpixel" as="facebookpixel"
+                   template="facebookpixel/addtowish.phtml"/>
+        </reference>
+    </wishlist_index_add>
+
+
+</layout>
+
+
+
