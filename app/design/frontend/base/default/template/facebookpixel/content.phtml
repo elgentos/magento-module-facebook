@@ -1,0 +1,33 @@
+<?php
+
+?>
+
+<!-- Facebook Pixel Code -->
+<script>
+    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+        n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+        document,'script','//connect.facebook.net/en_US/fbevents.js');
+
+    <?php
+    $pixel_id = $this->getPixelId();
+    ?>
+
+    fbq('init',  '<?php echo $pixel_id ?>');
+    fbq('track', 'PageView');
+
+    <?php
+//    //Stardand events
+//    echo $this->getViewContentEvent();
+//    echo $this->getSearchEvent();
+//    echo $this->getAddToCartEvent();
+//    echo $this->getAddToWishlistEvent();
+//    echo $this->getInitiateCheckoutEvent();
+//    echo $this->getAddPaymentInfoEvent();
+//    echo $this->getPurchaseEvent();
+//    echo $this->getLeadEvent();
+//    echo $this->getCompleteRegistrationEvent();
+    ?>
+
+</script>

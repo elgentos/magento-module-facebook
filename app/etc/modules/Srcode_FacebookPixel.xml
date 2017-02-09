@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Srcode_FacebookPixel>
+            <active>true</active>
+            <codePool>local</codePool>
+        </Srcode_FacebookPixel>
+    </modules>
+</config>

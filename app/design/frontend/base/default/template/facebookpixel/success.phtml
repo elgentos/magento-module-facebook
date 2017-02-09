@@ -1,0 +1,46 @@
+<?php
+
+?>
+
+<!-- Facebook Pixel Code -->
+<script>
+    !function (f, b, e, v, n, t, s) {
+        if (f.fbq)return;
+        n = f.fbq = function () {
+            n.callMethod ?
+                n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+        };
+        if (!f._fbq)f._fbq = n;
+        n.push = n;
+        n.loaded = !0;
+        n.version = '2.0';
+        n.queue = [];
+        t = b.createElement(e);
+        t.async = !0;
+        t.src = v;
+        s = b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t, s)
+    }(window,
+        document, 'script', '//connect.facebook.net/en_US/fbevents.js');
+
+    <?php
+
+    $pixel_id = $this->getPixelId();
+    ?>
+
+    <?php
+    $priceValue = 0;
+    $orderId = Mage::getSingleton('checkout/session')->getLastOrderId();
+    if ($orderId) {
+        $order = Mage::getModel('sales/order')->load($orderId);
+        $priceValue = $order->getGrandTotal();
+    }
+    ?>
+
+
+    <?php $priceCurrency = Mage::app()->getStore()->getCurrentCurrencyCode();  ; ?>
+
+    fbq('init', '<?php echo $pixel_id ?>');
+    fbq('track', 'Purchase', {value: <?php echo round($priceValue, 2) ?>, currency: '<?php echo $priceCurrency; ?>'});
+
+</script>
