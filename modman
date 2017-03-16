@@ -1,0 +1,7 @@
+app/etc/modules/Srcode_FacebookPixel.xml app/etc/modules/Srcode_FacebookPixel.xml
+
+app/code/local/Srcode/FacebookPixel app/code/local/Srcode/FacebookPixel
+
+app/design/frontend/base/default/layout/facebookpixel.xml app/design/frontend/base/default/layout/facebookpixel.xml
+app/design/frontend/base/default/template/facebookpixel app/design/frontend/base/default/template/facebookpixel
+
